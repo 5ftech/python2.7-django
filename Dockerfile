@@ -1,11 +1,5 @@
-FROM ubuntu:14.04
+FROM daocloud.io/python:2.7.8
 
 RUN apt-get update
-RUN apt-get install -y python-pip
-RUN pip install django
+RUN apt-get install -y -y python-pygame
 
-ARG SRC=/usr/share/src
-RUN mkdir -p $SRC
-WORKDIR $SRC
-
-CMD ["sh build.sh"]

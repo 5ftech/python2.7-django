@@ -1,4 +1,3 @@
-FROM daocloud.io/python:2-onbuild
-RUN mkdir -p /usr/share/src
-WORKDIR /usr/share/src
-CMD [ "python", "manage.py runserver 0.0.0.0:8000" ]
+FROM python:2.7
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
